@@ -7,7 +7,11 @@ function setAppHeight() {
 	$('html, body').css('height', window.innerHeight);
 
 	if (host.isIOS) {
-		$('#newsticker').css('top', Math.min(window.innerHeight, $(window).height()));
+		$('#log').css({
+			top: Math.min(window.innerHeight, $(window).height()),
+			bottom: 'auto',
+			transform: 'translateY(-100%)',
+		});
 	}
 
 	$('#window-inner-height').text(window.innerHeight);
