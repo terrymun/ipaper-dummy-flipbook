@@ -25,13 +25,21 @@ function setAppHeight() {
 $(function() {
 	setAppHeight();
 
+	window.addEventListener('touchmove', function (e) {
+		var $el = $(e.target);
+        if (!$el.is('#infotext') && !$el.closest('#infotext').length) {
+			e.preventDefault();
+			$('#timestamp').text('touchmove ' + new Date().getMilliseconds());
+		}
+    }, { passive: false });
+
 	const startTimer = () => {
 		stopTimer();
 
 		$('.start-auto-refresh').prop('disabled', true);
 		$('.cancel-auto-refresh').prop('disabled', false);
 		setAppHeight();
-		
+
 		timer = window.setInterval(() => {
 			setAppHeight();
 		}, 3000);
