@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width, minimal-ui, viewport-fit=cover">
+	<title>iPaper dummy flipbook test (mobile)</title>
+
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+	<link rel="stylesheet" type="text/css" href="./styles/shared.css">
+	<link rel="stylesheet" type="text/css" href="./styles/mobile.css">
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script type="text/javascript" src="./js/mobile.js"></script>
+</head>
+<body>
+	<div id="app-wrap">
+		<div id="topbar">Topbar</div>
+		<div id="main">
+			<div>
+				<button type="button" class="refresh-heights">Refresh heights</button>
+				<button type="button" class="start-auto-refresh" disabled>Start auto-refresh</button>
+				<button type="button" class="cancel-auto-refresh" disabled>Cancel auto-refresh</button>
+			</div>
+
+			<div>
+				<button type="button" class="refresh-heights">Refresh heights</button>
+				<button type="button" class="start-auto-refresh" disabled>Start auto-refresh</button>
+				<button type="button" class="cancel-auto-refresh" disabled>Cancel auto-refresh</button>
+			</div>
+
+			<div>
+				<button type="button" class="refresh-heights">Refresh heights</button>
+				<button type="button" class="start-auto-refresh" disabled>Start auto-refresh</button>
+				<button type="button" class="cancel-auto-refresh" disabled>Cancel auto-refresh</button>
+			</div>
+
+			<div>
+				<button type="button" class="refresh-heights">Refresh heights</button>
+				<button type="button" class="start-auto-refresh" disabled>Start auto-refresh</button>
+				<button type="button" class="cancel-auto-refresh" disabled>Cancel auto-refresh</button>
+			</div>
+		</div>
+		<div id="log">
+			<a href="./flipbook--mobile.html">Go to demo flipbook</a>
+			<table>
+				<thead>
+					<tr>
+						<th>Property</th>
+						<th>Value</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><code>window.innerHeight</code></td>
+						<td id="window-inner-height"></td>
+					</tr>
+					<tr>
+						<td><code>$(window).height</code></td>
+						<td id="window-height"></td>
+					</tr>
+				</tbody>
+			</table>
+			<small id="timestamp"></small>
+			<button type="button" class="refresh-heights">Refresh heights</button>
+			<button type="button" class="start-auto-refresh" disabled>Start auto-refresh</button>
+			<button type="button" class="cancel-auto-refresh" disabled>Cancel auto-refresh</button>
+		</div>
+	</div>
+</body>
+</html>
