@@ -15,7 +15,7 @@
 }
 
 #topbar,
-#flipbook,
+#main,
 #log {
     display: flex;
     flex-direction: column;
@@ -30,6 +30,13 @@
     padding-right: env(safe-area-inset-right);
     height: 48px;
     background-color: #ccc;
+}
+
+#main {
+    position: absolute;
+    top: 48px;
+    bottom: 100px;
+    justify-content: space-between;
 }
 
 #log {

@@ -16,12 +16,14 @@ function setAppHeight() {
 
 	$('#window-inner-height').text(window.innerHeight);
 	$('#window-height').text($(window).height());
+
+	$('#timestamp').text(new Date());
 }
 
 $(function() {
 	setAppHeight();
 
-	$('#refresh-heights').click(function() {
+	$('.refresh-heights').click(function() {
 		setAppHeight();
 	});
 });
