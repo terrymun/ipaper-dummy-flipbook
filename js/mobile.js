@@ -27,9 +27,12 @@ $(function() {
 
 	const startTimer = () => {
 		stopTimer();
+
+		$('.start-auto-refresh').prop('disabled', true);
+		$('.cancel-auto-refresh').prop('disabled', false);
+		setAppHeight();
+		
 		timer = window.setInterval(() => {
-			$('.start-auto-refresh').prop('disabled', true);
-			$('.cancel-auto-refresh').prop('disabled', false);
 			setAppHeight();
 		}, 3000);
 	};
