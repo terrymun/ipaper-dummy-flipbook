@@ -19,19 +19,13 @@ function setAppHeight() {
 	$('#window-inner-height').text(window.innerHeight);
 	$('#window-height').text($(window).height());
 
-	$('#timestamp').text(new Date());
+	window.scrollTo(0, 1);
+
+	$('#timestamp').text('scrollTo(0, 1) ', new Date());
 }
 
 $(function() {
 	setAppHeight();
-
-	window.addEventListener('touchmove', function (e) {
-		var $el = $(e.target);
-        if (!$el.is('#infotext') && !$el.closest('#infotext').length) {
-			e.preventDefault();
-			$('#timestamp').text('touchmove ' + new Date().getMilliseconds());
-		}
-    }, { passive: false });
 
 	const startTimer = () => {
 		stopTimer();
