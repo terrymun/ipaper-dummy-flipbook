@@ -3,6 +3,8 @@ const host = {
 	isIOS: /iphone; cpu/.test(ua) || /ipad; cpu/.test(ua) || /ipod; cpu/.test(ua),
 }
 
+let timer;
+
 function setAppHeight() {
 	$('html, body').css('height', window.innerHeight);
 
@@ -23,7 +25,27 @@ function setAppHeight() {
 $(function() {
 	setAppHeight();
 
-	$('.refresh-heights').click(function() {
-		setAppHeight();
-	});
+	const startTimer = () => {
+		stopTimer();
+		timer = window.setInterval(() => {
+			$('.start-auto-refresh').prop('disabled', true);
+			$('.cancel-auto-refresh').prop('disabled', false);
+			setAppHeight();
+		}, 3000);
+	};
+
+	const stopTimer = () => {
+		if (timer) {
+			window.clearInterval(timer);
+
+			$('.start-auto-refresh').prop('disabled', false);
+			$('.cancel-auto-refresh').prop('disabled', true);
+		}
+	}
+
+	$('.refresh-heights').click(() => setAppHeight());
+	$('.start-auto-refresh').click(() => startTimer());
+	$('.cancel-auto-refresh').click(() => stopTimer());
+
+	startTimer();
 });
