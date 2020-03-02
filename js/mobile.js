@@ -21,7 +21,7 @@ function setAppHeight() {
 
 	window.scrollTo(0, 1);
 
-	$('#timestamp').text('scrollTo(0, 1) ', new Date());
+	$('#timestamp').text('scrollTo(0, 1) ' + new Date());
 }
 
 $(function() {
