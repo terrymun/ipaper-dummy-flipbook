@@ -19,9 +19,7 @@ function setAppHeight() {
 	$('#window-inner-height').text(window.innerHeight);
 	$('#window-height').text($(window).height());
 
-	window.scrollTo(0, 1);
-
-	$('#timestamp').text('scrollTo(0, 1) ' + new Date());
+	$('#timestamp').text(new Date());
 }
 
 $(function() {
