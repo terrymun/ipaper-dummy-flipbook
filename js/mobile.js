@@ -19,7 +19,7 @@ function setAppHeight() {
 	$('#window-inner-height').text(window.innerHeight);
 	$('#window-height').text($(window).height());
 
-	$('#timestamp').text(new Date());
+	$('#timestamp').text('No set height: ' + new Date());
 }
 
 $(function() {
