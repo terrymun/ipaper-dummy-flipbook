@@ -6,15 +6,15 @@ const host = {
 let timer;
 
 function setAppHeight() {
-	$('html, body').css('height', window.innerHeight);
+	//$('html, body').css('height', window.innerHeight);
 
-	if (host.isIOS) {
-		$('#log').css({
-			top: Math.min(window.innerHeight, $(window).height()),
-			bottom: 'auto',
-			transform: 'translateY(-100%)',
-		});
-	}
+	// if (host.isIOS) {
+	// 	$('#log').css({
+	// 		top: Math.min(window.innerHeight, $(window).height()),
+	// 		bottom: 'auto',
+	// 		transform: 'translateY(-100%)',
+	// 	});
+	// }
 
 	$('#window-inner-height').text(window.innerHeight);
 	$('#window-height').text($(window).height());
